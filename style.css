@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto';
+}
+
+.layout {
+    
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+
+    background-color: turquoise;
+    /* border: 5px solid red; */
+
+    height: 100vh;
+}
+
+
+.header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    background-color: aliceblue;
+
+
+    display: grid;
+    justify-items: start;
+    align-items: center;
+
+}
+
+
+.main {
+    grid-column: 1/2;
+    grid-row: 2/-1;
+
+}
+
+h1 {
+    font-family: 'Roboto';
+    margin-left: 30px;
+}
