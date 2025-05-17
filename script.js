@@ -69,6 +69,15 @@ displayBooks();
 
 
 
+const addButton = document.querySelector(".addButton");
+const dialog = document.querySelector("dialog");
+
+addButton.addEventListener("click", function(){
+    dialog.showModal();
+
+});
+
+
 
 
 
