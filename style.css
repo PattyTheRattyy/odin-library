@@ -12,7 +12,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 8fr;
 
-    background-color: turquoise;
+    background-color: rgb(149, 212, 205);
     /* border: 5px solid red; */
 
     height: 100vh;
@@ -42,4 +42,22 @@
 h1 {
     font-family: 'Roboto';
     margin-left: 30px;
+}
+
+
+
+.card {
+    background-color: white;
+
+    height: 100px;
+    width: 200px;
+
+
+    border-left: 10px solid #f0b429;
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+    padding-bottom: 30px;
 }
