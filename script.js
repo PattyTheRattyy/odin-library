@@ -5,9 +5,16 @@ myLibrary = [];
 const newBook = new Book("hey", "patrick", "true");
 const newBook2 = new Book("hey", "patrick", "true");
 const newBook3 = new Book("hey", "patrick", "true");
+const newBook4 = new Book("hey", "patrick", "true");
+
 myLibrary.push(newBook);
 myLibrary.push(newBook2);
 myLibrary.push(newBook3);
+myLibrary.push(newBook4);
+myLibrary.push(newBook3);
+myLibrary.push(newBook3);
+myLibrary.push(newBook3);
+
 
 function Book(title, author, beenRead) {
     this.title = title;
@@ -26,7 +33,6 @@ function addBookToLibrary(title, author, beenRead) {
 
 }
 
-const main = document.querySelector(".main");
 function displayBooks() {
     myLibrary.forEach(book => {
 
@@ -38,19 +44,21 @@ function displayBooks() {
 }
 
 
+const bookContainer = document.querySelector(".book-container");
 function createBookCard(book) {
+
     const card = document.createElement("div");
     card.classList.add("card")
 
     const title = document.createElement("p");
-    title.textContent = book.title;
+    title.textContent = "Title: " + book.title;
     const author = document.createElement("p");
-    author.textContent = book.author;
+    author.textContent = "Author: " + book.author;
     const beenRead = document.createElement("p");
-    beenRead.textContent = book.beenRead;
+    beenRead.textContent = "Read it? " + book.beenRead;
 
 
-    main.appendChild(card);
+    bookContainer.appendChild(card);
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(beenRead);
