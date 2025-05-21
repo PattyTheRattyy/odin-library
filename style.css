@@ -41,10 +41,12 @@
     border-radius: 10px;
     margin-right: 80px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
 }
 .addButton:hover {
     color: #0069c6; 
     background-color: white;
+    border: 2px solid black;
 }
 .addButton:active {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -95,6 +97,7 @@ form {
     border-radius: 10px;
     height: 30px;
     width: 60px;
+    font-weight: 700;
 }
 .addBook:hover {
     color: white;
@@ -167,7 +170,7 @@ h1 {
     border-radius: 10px;
     height: 40px;
     width: 80px;
-    /* transition: all ease-in 0.1s; */
+    font-weight: 700;
 }
 
 .delBtn:hover {
@@ -178,3 +181,28 @@ h1 {
 .delBtn:active {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+
+.card-p {
+    font-weight: 700;
+}
+
+.toggle {
+    color: #eeeeee;
+    background-color: #0069c6;
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 80px;
+    font-weight: 700;
+}
+
+.toggle:hover {
+    color: #0069c6; 
+    background-color: white;
+    border: 1px solid black;
+}
+.toggle:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+

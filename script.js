@@ -29,15 +29,29 @@ function createBookCard(book) {
 
     const card = document.createElement("div");
     card.classList.add("card")
-    const ID = book.ID
+    const ID = book.ID;
     card.setAttribute("data-id", ID);
 
     const title = document.createElement("p");
+    title.classList.add("card-p");
     title.textContent = "Title: " + book.title;
+    const title2 = document.createElement("p");
+    title2.textContent = "" + book.title;
+
+
     const author = document.createElement("p");
+    author.classList.add("card-p");
     author.textContent = "Author: " + book.author;
+    const author2 = document.createElement("p");
+    author2.textContent = book.author;
+
+
     const pages = document.createElement("p");
+    pages.classList.add("card-p")
     pages.textContent = "Pages: " + book.pages;
+    const pages2 = document.createElement("p");
+    pages2.textContent = book.pages;
+
     const beenRead = document.createElement("button");
     beenRead.classList.add("toggle");
     if (book.beenRead === true) {
@@ -46,6 +60,18 @@ function createBookCard(book) {
         read = "Not Read"
     }
     beenRead.textContent = read;
+
+    beenRead.addEventListener("click", function(){
+        if (beenRead.textContent == "Read") {
+            beenRead.textContent = "Not Read"
+            book.beenRead = "Not Read"
+        }
+        else {
+            beenRead.textContent = "Read"
+            book.beenRead = "Read"
+        }
+    });
+
 
     const delBtn = document.createElement("button");
     delBtn.classList.add("delBtn");
@@ -63,18 +89,6 @@ function createBookCard(book) {
     card.appendChild(beenRead);
     card.appendChild(delBtn);
 
-
-    const toggleBtn = document.querySelector(".toggle");
-    toggleBtn.addEventListener("click", function(){
-        if (toggleBtn.textContent == "Read") {
-            toggleBtn.textContent = "Not Read"
-            book.beenRead = "Not Read"
-        }
-        else {
-            toggleBtn.textContent = "Read"
-            book.beenRead = "Read"
-        }
-    });
 }
 
 
