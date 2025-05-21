@@ -38,23 +38,23 @@ function createBookCard(book) {
     author.textContent = "Author: " + book.author;
     const pages = document.createElement("p");
     pages.textContent = "Pages: " + book.pages;
-    const beenRead = document.createElement("p");
+    const beenRead = document.createElement("button");
+    beenRead.classList.add("toggle");
     if (book.beenRead === true) {
-        read = "Yes"
+        read = "Read"
     } else {
-        read = "No"
+        read = "Not Read"
     }
-    beenRead.textContent = "Read it? " + read;
+    beenRead.textContent = read;
 
     const delBtn = document.createElement("button");
+    delBtn.classList.add("delBtn");
+    delBtn.textContent = "Delete";
     delBtn.addEventListener("click", function(){
         console.log(myLibrary.length)
         deleteBook(ID);
         deleteCard(ID);
-        
-
     });
-
 
     bookContainer.appendChild(card);
     card.appendChild(title);
@@ -63,7 +63,22 @@ function createBookCard(book) {
     card.appendChild(beenRead);
     card.appendChild(delBtn);
 
+
+    const toggleBtn = document.querySelector(".toggle");
+    toggleBtn.addEventListener("click", function(){
+        if (toggleBtn.textContent == "Read") {
+            toggleBtn.textContent = "Not Read"
+            book.beenRead = "Not Read"
+        }
+        else {
+            toggleBtn.textContent = "Read"
+            book.beenRead = "Read"
+        }
+    });
 }
+
+
+
 
 function deleteBook(ID){
     for (let i = 0; i < myLibrary.length; i++) {
@@ -71,27 +86,11 @@ function deleteBook(ID){
             myLibrary.splice(i);
         }
     }
-    console.log(myLibrary.length)
 }
 
 function deleteCard(ID) {
-    // console.log(ID);
-    // const card = document.querySelector("card[data-id=1]");
-    // console.log(card);
-    // bookContainer.removeChild(card);
-
-    console.log(`[data-id="${ID}"]`);
-
     const card = document.querySelector(`[data-id="${ID}"]`);
     bookContainer.removeChild(card);
-    
-    // cards.forEach((card) => {
-    //     console.log("data-id: " + card.dataset.id);
-    //     if (card.dataset.id == ID) {
-    //         bookContainer.removeChild(card);
-
-    //     }
-    // });
 }
 
 

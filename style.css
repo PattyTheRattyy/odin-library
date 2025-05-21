@@ -24,29 +24,30 @@
 
     background-color: rgb(149, 212, 205);
 
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
 }
 
 .addButton {
-
     color: #eeeeee;
     background-color: #0069c6;
     height: 50px;
     width: 80px;
     border: none;
     border-radius: 10px;
-
     margin-right: 80px;
-
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
+}
+.addButton:hover {
+    color: #0069c6; 
+    background-color: white;
+}
+.addButton:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -94,6 +95,13 @@ form {
     border-radius: 10px;
     height: 30px;
     width: 60px;
+}
+.addBook:hover {
+    color: white;
+    background-color: green;
+}
+.addBook:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -152,4 +160,21 @@ h1 {
 
 
     padding-left: 40px;
+}
+
+.delBtn {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
+    /* transition: all ease-in 0.1s; */
+}
+
+.delBtn:hover {
+    background-color: red;
+    color: white;
+}
+
+.delBtn:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
