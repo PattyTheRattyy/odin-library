@@ -20,46 +20,48 @@
       </div>
       <div class="main">
         <dialog>
-          <form method="dialog" class="addBookForm">
-            <div class="inputLabel">
-              <label for="title">Title</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                placeholder="Title"
-                autofocus
-                required
-              />
-            </div>
-            <div class="inputLabel">
-              <label for="author">Author</label>
-              <input
-                type="text"
-                name="author"
-                id="author"
-                placeholder="Author"
-                required
-              />
-            </div>
-            <div class="inputLabel">
-              <label for="pages">Pages (1-5000)</label>
-              <input
-                type="number"
-                name="pages"
-                id="pages"
-                min="1"
-                max="5000"
-                placeholder="page count (1-5000)"
-                required
-              />
-            </div>
-            <div class="inputLabel">
-              <label for="beenRead">I have read this book?</label>
-              <input type="checkbox" name="beenRead" id="beenRead" />
-            </div>
-            <button class="addBook" type="submit">Add</button>
-          </form>
+          <div class="flex">
+            <form method="dialog" class="addBookForm">
+              <div class="inputLabel">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Title"
+                  autofocus
+                  required
+                />
+              </div>
+              <div class="inputLabel">
+                <label for="author">Author</label>
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  placeholder="Author"
+                  required
+                />
+              </div>
+              <div class="inputLabel">
+                <label for="pages">Pages (1-5000)</label>
+                <input
+                  type="number"
+                  name="pages"
+                  id="pages"
+                  min="1"
+                  max="5000"
+                  placeholder="page count (1-5000)"
+                  required
+                />
+              </div>
+              <div class="inputLabel">
+                <label for="beenRead">Have you read this book?</label>
+                <input type="checkbox" name="beenRead" id="beenRead" />
+              </div>
+              <button class="addBook" type="submit">Add</button>
+            </form>
+          </div>
         </dialog>
         <div class="book-container"></div>
       </div>
