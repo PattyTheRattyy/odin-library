@@ -32,25 +32,38 @@ function createBookCard(book) {
     const ID = book.ID;
     card.setAttribute("data-id", ID);
 
+
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("card-div");
     const title = document.createElement("p");
     title.classList.add("card-p");
-    title.textContent = "Title: " + book.title;
+    title.textContent = "Title: ";
     const title2 = document.createElement("p");
-    title2.textContent = "" + book.title;
+    title2.textContent = book.title;
+    titleDiv.appendChild(title);
+    titleDiv.appendChild(title2);
 
 
+    const authorDiv = document.createElement("div");
+    authorDiv.classList.add("card-div");
     const author = document.createElement("p");
     author.classList.add("card-p");
-    author.textContent = "Author: " + book.author;
+    author.textContent = "Author: ";
     const author2 = document.createElement("p");
     author2.textContent = book.author;
+    authorDiv.appendChild(author);
+    authorDiv.appendChild(author2);
 
 
+    const pagesDiv = document.createElement("div");
+    pagesDiv.classList.add("card-div");
     const pages = document.createElement("p");
     pages.classList.add("card-p")
-    pages.textContent = "Pages: " + book.pages;
+    pages.textContent = "Pages: ";
     const pages2 = document.createElement("p");
     pages2.textContent = book.pages;
+    pagesDiv.appendChild(pages);
+    pagesDiv.appendChild(pages2);
 
     const beenRead = document.createElement("button");
     beenRead.classList.add("toggle");
@@ -83,9 +96,9 @@ function createBookCard(book) {
     });
 
     bookContainer.appendChild(card);
-    card.appendChild(title);
-    card.appendChild(author);
-    card.appendChild(pages);
+    card.appendChild(titleDiv);
+    card.appendChild(authorDiv);
+    card.appendChild(pagesDiv);
     card.appendChild(beenRead);
     card.appendChild(delBtn);
 
