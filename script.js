@@ -4,12 +4,22 @@ myLibrary = [];
 
 
 
-function Book(title, author, pages, beenRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.beenRead = beenRead;
-    this.ID = crypto.randomUUID()
+// function Book(title, author, pages, beenRead) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.beenRead = beenRead;
+//     this.ID = crypto.randomUUID()
+// }
+
+class Book {
+    constructor(title, author, pages, beenRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.beenRead = beenRead;
+        this.ID = crypto.randomUUID()
+    }
 }
 
 function addBookToLibrary(title, author, pages, beenRead) {
